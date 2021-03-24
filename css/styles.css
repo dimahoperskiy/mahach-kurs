@@ -1315,7 +1315,7 @@ header p {
 #elem2 {
     opacity: 0;
     transform: rotate3d(1, 1, 1, -45deg);
-    transition: bounce 0.8s ease 0.3s;
+    transition: all 0.8s ease 0.3s;
 }
 
 #elem2._active {
