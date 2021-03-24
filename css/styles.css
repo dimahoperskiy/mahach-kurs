@@ -1398,8 +1398,15 @@ header p {
     position: absolute;
     left: 0;
     bottom: 20%;
-    /* bottom: 13%; */
     width: 45%;
+    z-index: 1;
+}
+
+@media (min-width: 1500px) {
+    .authorImg {
+        left: -8%;
+        bottom: 15%;
+    }
 }
 
 .fifthBlockWrapperMobile {
