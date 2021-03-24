@@ -115,7 +115,7 @@ header p {
 
 @media (max-width: 450px) {
     .clr20 {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -186,7 +186,8 @@ header p {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
-        margin-top: 20px;
+        margin-top: 10px;
+        font-size: 18px;
     }
 }
 
@@ -228,7 +229,7 @@ header p {
 
 @media (max-width: 450px) {
     .firstBlockWrapper {
-        padding-top: 270px;
+        padding-top: 220px;
     }
 }
 
@@ -264,7 +265,7 @@ header p {
 
 @media (max-width: 450px) {
     .firstLearnLabel {
-        font-size: 24px;
+        font-size: 22px;
         width: 90%;
     }
 }
@@ -286,7 +287,7 @@ header p {
 
 @media (max-width: 450px) {
     .firstKnowLabel {
-        font-size: 22px;
+        font-size: 20px;
         width: 90%;
     }
 }
@@ -369,7 +370,7 @@ header p {
     width: 50%;
     opacity: 0;
     transform: translate(400px, 0px);
-    transition: all 2s cubic-bezier(0.01, 1.38, 0.33, 0.66) 0.5s;
+    transition: all 1s ease 0.5s;
 }
 
 
@@ -394,9 +395,20 @@ header p {
 }
 
 .firstBlockInfo {
+    position: relative;
     display: flex;
     margin-top: -50px;
     height: 500px;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(0px, 100px);
+    transition: all 0.7s cubic-bezier(0, 1.29, 1, 1.42) 0.5s;
+}
+
+.firstBlockInfo._active {
+    z-index: 2;
+    opacity: 1;
+    transform: translate(0px, 0px);
 }
 
 @media (max-width: 450px) {
@@ -409,8 +421,9 @@ header p {
 
 .firstBlockInfoElem {
     width: 33%;
-    z-index: 2;
 }
+
+
 
 @media (max-width: 450px) {
     .firstBlockInfoElem {
@@ -421,12 +434,21 @@ header p {
     }
 }
 
+.giftImg {
+    width: 116px;
+}
+
+.onlineImg {
+    width: 116px;
+}
+
+.bookImg {
+    width: 116px;
+}
+
 #firstInfoElem {
     align-self: center;
-    z-index: -1;
-    opacity: 0;
-    transform: translate(0px, 100px);
-    transition: all 0.7s cubic-bezier(0, 1.29, 1, 1.42) 0.5s;
+
 }
 
 #firstInfoElem._active {
@@ -439,10 +461,6 @@ header p {
     display: flex;
     align-self: flex-end;
     flex-direction: column;
-    opacity: 0;
-    z-index: -1;
-    transform: translate(0px, 100px);
-    transition: all 0.7s cubic-bezier(0, 1.29, 1, 1.42) 0.8s;
 }
 
 #secondInfoElem._active {
@@ -464,12 +482,8 @@ header p {
 #thirdInfoElem {
     position: relative;
     display: flex;
-    z-index: -1;
     flex-direction: column;
     top: 60px;
-    opacity: 0;
-    transform: translate(0px, 100px);
-    transition: all 0.7s cubic-bezier(0, 1.29, 1, 1.42) 1.1s;
 }
 
 #thirdInfoElem._active {
@@ -496,6 +510,7 @@ header p {
 @media (max-width: 450px) {
     .firstBlockInfoText {
         order: 2;
+        font-size: 19px;
     }
 }
 
@@ -573,7 +588,7 @@ header p {
 @media (max-width: 450px) {
     .plantOneImg {
         top: 20%;
-        opacity: 0.4;
+        opacity: 0.3;
     }
 }
 
@@ -595,7 +610,7 @@ header p {
 @media (max-width: 450px) {
     .plantTwoImg {
         top: 20%;
-        opacity: 0.4;
+        opacity: 0.3;
     }
 }
 
@@ -627,6 +642,12 @@ header p {
     z-index: 1;
 }
 
+@media (max-width: 450px) {
+    .courseForWhomLabel {
+        font-size: 42px;
+    }
+}
+
 .whomList {
     width: 65%;
     display: flex;
@@ -654,11 +675,16 @@ header p {
     width: 33%;
 }
 
+.whomElem img {
+    width: 116px;
+}
+
 #whomOne {
     opacity: 0;
-    transform: translate(-100px, -100px);
+    transform: translate(0px, 100px);
     transition: all 0.7s ease 0.3s;
 }
+
 
 #whomOne._active {
     opacity: 1;
@@ -668,7 +694,7 @@ header p {
 #whomTwo {
     opacity: 0;
     transform: translate(0px, 100px);
-    transition: all 0.7s ease 0.3s;
+    transition: all 0.7s ease 0.6s;
 }
 
 #whomTwo._active {
@@ -678,8 +704,8 @@ header p {
 
 #whomThree {
     opacity: 0;
-    transform: translate(100px, -100px);
-    transition: all 0.7s ease 0.5s;
+    transform: translate(0px, 100px);
+    transition: all 0.7s ease 0.9s;
 }
 
 #whomThree._active {
@@ -694,6 +720,12 @@ header p {
         width: 100%;
         margin-top: -20px;
     }
+    #whomTwo {
+        transition: all 0.7s ease 0.3s;
+    }
+    #whomThree {
+        transition: all 0.7s ease 0.3s;
+    }
 }
 
 
@@ -701,6 +733,12 @@ header p {
     margin-bottom: 0;
     font-size: 25px;
     font-family: "UniNeueBold", sans-serif;
+}
+
+@media (max-width: 450px) {
+    .whomLabel {
+        font-size: 22px;
+    }
 }
 
 .smallNumber {
@@ -711,7 +749,7 @@ header p {
 
 .whatYouLearn {
     font-size: 18px;
-    font-family: "UniNeueBold", sans-serif;
+    font-family: "UniNeueRegular", sans-serif;
     color: rgb(22, 22, 22);
     line-height: 1;
     margin-top: 10px;
@@ -719,10 +757,10 @@ header p {
 
 .whatYouLearnList {
     display: flex;
-    width: 60%;
+    width: 70%;
     flex-wrap: wrap;
     align-self: center;
-    justify-content: space-around;
+    justify-content: center;
     font-family: "UniNeueBold", sans-serif;
 
 }
@@ -731,18 +769,15 @@ header p {
     .whatYouLearnList {
         flex-direction: column;
         text-align: center;
+        width: 80%;
+        z-index: 2;
     }
 }
 
-@media (max-width: 1000px) {
-    .whatYouLearnList {
-        width: 80%;
-    }
-}
 
 #firstLearnItem {
     text-align: end;
-    width: 25%;
+    width: 28%;
 }
 
 @media (max-width: 1000px) {
@@ -753,7 +788,11 @@ header p {
 }
 
 #secondLearnItem {
-    width: 38%
+    background-color: #e5f0f4;
+    border-radius: 22px;
+    width: 35%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 @media (max-width: 1000px) {
@@ -763,13 +802,41 @@ header p {
     }
 }
 
+@media (max-width: 1000px) {
+    #secondLearnItem {
+        background-color: inherit;
+    }
+}
+
 #thirdLearnItem {
-    width: 25%
+    width: 28%;
 }
 
 @media (max-width: 1000px) {
     #thirdLearnItem {
         width: 100%;
+    }
+}
+
+#fourthLearnItem {
+    background-color: #e5f0f4;
+    border-radius: 22px;
+}
+
+@media (max-width: 1000px) {
+    #fourthLearnItem {
+        background-color: inherit;
+    }
+}
+
+#fifthLearnItem {
+    background-color: #e5f0f4;
+    border-radius: 22px;
+}
+
+@media (max-width: 1000px) {
+    #fifthLearnItem {
+        background-color: inherit;
     }
 }
 
@@ -779,6 +846,9 @@ header p {
     font-size: 20px;
     align-items: center;
     justify-content: flex-end;
+    margin-right: 3%;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 1000px) {
@@ -789,19 +859,10 @@ header p {
     }
 }
 
-.vLine {
-    align-self: center;
-    height: 35px;
-    border-left: 2px solid black;
-}
 
-.gap {
-    margin-right: 10%;
-}
-
-@media (max-width: 1000px) {
-    .vLine {
-        display: none;
+@media (max-width: 450px) {
+    .whatYouLearnItem {
+        margin-bottom: 10px;
     }
 }
 
@@ -909,6 +970,7 @@ header p {
         width: 160%;
         bottom: 20px;
         left: 0;
+        opacity: 0.6;
     }
 }
 
@@ -929,7 +991,7 @@ header p {
         width: 120%;
         top: 90px;
         right: 0;
-        opacity: 0.9;
+        opacity: 0.6;
     }
 }
 
@@ -1074,6 +1136,151 @@ header p {
 #str13._active {
     opacity: 1;
     transform: translate(0px, 0px);
+}
+
+@media (max-width: 450px) {
+    #str1 {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str1._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str2 {
+        opacity: 0;
+        transform: translate(100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str2._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str3 {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str3._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str4 {
+        opacity: 0;
+        transform: translate(100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str4._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str5 {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str5._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str6 {
+        opacity: 0;
+        ttransform: translate(100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str6._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str7 {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str7._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str8 {
+        opacity: 0;
+        transform: translate(100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str8._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str9 {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str9._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str10 {
+        opacity: 0;
+        transform: translate(100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str10._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str11 {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str11._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str12 {
+        opacity: 0;
+        transform: translate(100px, 0px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str12._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    #str13 {
+        opacity: 0;
+        transform: translate(0px, 100px);
+        transition: all 0.5s ease 0.3s;
+    }
+
+    #str13._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
 }
 
 
@@ -1238,6 +1445,12 @@ header p {
     margin-bottom: 15px;
 }
 
+@media (max-width: 450px) {
+    .tariffName {
+        font-size: 30px;
+    }
+}
+
 .tariffInfo {
     display: flex;
     flex-direction: column;
@@ -1262,6 +1475,12 @@ header p {
 .tariffInfoText {
     font-size: 18px;
     margin: 10px 0 10px 0;
+}
+
+@media (max-width: 450px) {
+    .tariffInfoText {
+        font-size: 16px;
+    }
 }
 
 .tariffInfoText.not {
@@ -1366,7 +1585,7 @@ header p {
     font-size: 35px;
     opacity: 0;
     transform: translate(-200px, 0px);
-    transition: all 1s cubic-bezier(0.55, 0.06, 0.68, 0.19) 0.5s;
+    transition: all 0.5s ease 0.5s;
 }
 
 .authorName._active {
